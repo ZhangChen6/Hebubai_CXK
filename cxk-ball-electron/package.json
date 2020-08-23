@@ -1,0 +1,41 @@
+{
+  "name": "CXK-ball-master",
+  "version": "1.0.0",
+  "description": "CXK play basktball",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "build": {
+    "productName": "Basketball",
+    "appId": "monster.hebubai.CXK",
+    "directories": {
+      "output": "build"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "apk"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Play Basketball"
+    }
+  },
+  "author": "Hebubai",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "9.1.0",
+    "electron-builder":"22.7.0"
+  }
+}
